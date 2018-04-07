@@ -1,0 +1,44 @@
+<link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+
+
+<nav class="navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav justify-content-around">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-m">
+            <a class="nav-link" href="/computer">Packaged Computer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/diy">DIY Your Computer</a>
+        </li>
+        <li class="nav-item  col-4">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+        <% if(!user){ %>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>  
+            
+        <% }else{ %>
+            <li class="nav-item">
+            <a class="nav-link">Welcome! <%- user.name %></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+            </li>
+        <% } %>
+
+        
+        
+        
+    </ul>  
+</nav>
+<!-- ********************************************************************************-->
+
